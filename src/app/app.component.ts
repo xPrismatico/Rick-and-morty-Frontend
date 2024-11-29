@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
-
+import { HttpClientModule } from '@angular/common/http';
+import { routes } from './app.routes';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],

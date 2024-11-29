@@ -1,8 +1,24 @@
+
+
 <div>
-  <h1 class="flex gap-5 justify-center items-center">Rick and Morty App</h1>
+  <h1 class="text-center text-2xl font-bold">Rick and Morty App</h1>
 </div>
 
+<div class="flex justify-between items-center mt-4">
+  <button
+    class="bg-gray-500 text-white px-4 py-2 rounded"
+    (click)="prevPage()"
+    [disabled]="currentPage === 1"
+  >
+    Anterior
+  </button>
+  <button
+    class="bg-gray-500 text-white px-4 py-2 rounded"
+    (click)="nextPage()"
+    [disabled]="currentPage === maxPage"
+  >
+    Siguiente
+  </button>
 
-<div class="flex gap-5 justify-center items-center w-screen h-screen">
-  <character-button></character-button>
+  <span>Página {{ currentPage }} de {{ maxPage }}</span>
 </div>

@@ -9,9 +9,13 @@ export const routes: Routes = [
   },
   // VALIDAR RUTAS
   {
-    path: '**', // Cualquier caso que no sea home en el url
-    pathMatch: 'full', // Me redirija a Home con cualquier cosa
-    redirectTo: 'home' // Redirigir a home
+    path: '', // Cualquier caso que no sea home en el url
+    redirectTo: 'home', // Redirigir a home
+    pathMatch: 'full' // Me redirija a Home con cualquier cosa
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
   }
 
 
